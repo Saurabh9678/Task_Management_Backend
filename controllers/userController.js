@@ -6,6 +6,12 @@ const sendToken = require("../utils/jwtToken");
 exports.registerUser = catchAsyncError(async (req, res, next) => {
   const { username, password } = req.body;
 
+  if (!username || !password) {
+    return next(
+      new ErrorHandler("Please enter your username and password", 400)
+    );
+  }
+
   const usernameExist = await User.findOne({
     where: { username: username },
   }).catch((err) => {
