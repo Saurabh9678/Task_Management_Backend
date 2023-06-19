@@ -43,7 +43,7 @@ Refer to
 #### REGISTER USER
 
 ```http
-  POST /api/v1/register
+  POST /api/v1/user/register
 ```
 | Body | Type     | Description                       |
 | :-------- | :------- | :-------------------------------- |
@@ -53,7 +53,7 @@ Refer to
 #### LOGIN USER
 
 ```http
-  POST /api/v1/login
+  POST /api/v1/user/login
 ```
 | Body | Type     | Description                       |
 | :-------- | :------- | :-------------------------------- |
@@ -64,7 +64,7 @@ Refer to
 #### CREATE TASK 
 
 ```http
-  POST /api/v1/createTask
+  POST /api/v1/user/createTask
 ```
 | Body | Type     | Description                       |
 | :-------- | :------- | :-------------------------------- |
@@ -74,13 +74,13 @@ Refer to
 #### GET USER ALL TASK 
 
 ```http
-  GET /api/v1/getTask
+  GET /api/v1/user/tasks
 ```
 
 #### DELETE USER SINGLE TASK
 
 ```http
-  DELETE /api/v1/task/${taskId}
+  DELETE /api/v1/user/task/${taskId}
 ```
 
 | PARAMETER | Type     | Description                       |
